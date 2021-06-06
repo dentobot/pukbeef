@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><title>appointment@SmileyDentalClinic</title></head>
+<head><title>order@PuksBeefDelivery</title></head>
  
 <body>
  
@@ -11,13 +11,13 @@
   async function getUserProfile() {
    const profile = await liff.getProfile()
    window.location.replace(
-     `https://docs.google.com/forms/d/e/1FAIpQLSfRK4i9m_Dv8Dt3mdn7NJKgLKPwOsZ8rxBsPb2HkGBVOsdVag/viewform?usp=pp_url
-       &entry.2089218021=${profile.displayName}`
+     `https://docs.google.com/forms/d/e/1FAIpQLSfW69EyXzOuhZg6Es8LzWH4_KXLT6COJMhSDzcOLLSElTrhkQ/viewform?usp=pp_url
+       &entry.1000726114=${profile.displayName}`
      );
    }
  
   async function main() {
-     await liff.init({ liffId: "1655727994-LP3qnzd5" })
+     await liff.init({ liffId: "1656070330-62J2b4JP" })
        if (liff.isLoggedIn()) {
          getUserProfile()
        } else {
