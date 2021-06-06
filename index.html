@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head><title>order@PuksBeefDelivery</title></head>
+ 
+<body>
+ 
+<script src="https://static.line-scdn.net/liff/edge/versions/2.8.0/sdk.js"></script>
+ 
+<script>
+ 
+  async function getUserProfile() {
+   const profile = await liff.getProfile()
+   window.location.replace(
+     `https://docs.google.com/forms/d/e/1FAIpQLSfW69EyXzOuhZg6Es8LzWH4_KXLT6COJMhSDzcOLLSElTrhkQ/viewform?usp=pp_url
+       &entry.1000726114=${profile.displayName}`
+     );
+   }
+ 
+  async function main() {
+     await liff.init({ liffId: "1656070330-62J2b4JP" })
+       if (liff.isLoggedIn()) {
+         getUserProfile()
+       } else {
+         liff.login()
+       }
+   }
+   main()
+ </script>
+ 
+ </body>
+</html>
